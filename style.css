@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Open+Sans&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Dosis:wght@300;400&family=Open+Sans&family=Raleway&display=swap');
 
 * {
     margin: 0;
@@ -20,6 +20,7 @@ header {
     height: 80px;
     background-color: rgb(24, 23, 23);
     position: fixed;
+    z-index: 99;
 }
 
 .menu-container {
@@ -56,6 +57,10 @@ header {
     text-decoration: none;    
 }
 
+.menu .menu-items .item a:hover {
+    color: #fab702;  
+}
+
 /* Banner - Inicio */
 
 #inicio {
@@ -65,15 +70,65 @@ header {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
 }
+
+.banner {
+    
+    height: 100vh;
+}
+
+.content-banner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-banner img {
+    max-width: 80%;
+    width: 170px;
+
+}
+
+.content-banner h1 {
+    font-family: 'Abel', sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;    
+}
+
+.content-banner h1 span {
+    color: #fab702;    
+}
+
+.content-banner a {
+    text-decoration: none;
+    margin-top: 70px;
+    letter-spacing: 4px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 10px 15px;
+    transition: all 0.5s ease;
+}
+
+.content-banner a:hover {
+    color: black;
+    background-color: white;
+}
+
 
 /* Sobre mim */
 
 #sobre {
     width: 100vw;
-    height: 100vh;
     background-color: black;         
 }
 
@@ -84,21 +139,22 @@ header {
     
 }
 
-.content-sobre {
+.content{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 100px;    
+    padding-bottom: 100px;
 }
 
-.content-sobre .header {
+.content .header {
     width: 60%;
     margin-bottom: 50px;    
     text-align: center;
 }
 
-.content-sobre .header h2 {
+.content .header h2 {
     font-family: 'Dosis', sans-serif;
     margin-bottom: 15px;
     font-size: 3rem;
@@ -108,26 +164,26 @@ header {
     color: #fff;
 }
 
-.content-sobre .body {
+.content .body {
     display: flex;
     justify-content: space-between;
 }
 
-.content-sobre .body .left {
+.content .body .left {
     width: 30%;
     margin-right: 30px;
 }
 
-.content-sobre .body .left img {    
+.content .body .left img {    
     width: 100%;
 }
 
 
-.content-sobre .body .right {
+.content .body .right {
     width: 100%;    
 }
 
-.content-sobre .body .right h2 {
+.content .body .right h2 {
     font-size: 2.8rem;
     font-family: 'Dosis', sans-serif;
     font-weight: 300;
@@ -136,7 +192,7 @@ header {
     margin-bottom: 3px;
 }
 
-.content-sobre .body .right h3 {
+.content .body .right h3 {
     font-size: 1.6rem;    
     font-family: 'Dosis', sans-serif;    
     font-weight: 100;
@@ -145,7 +201,7 @@ header {
     margin-bottom: 25px;
 }
 
-.content-sobre .body .right p {
+.content .body .right p {
     font-size: 1.4rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -154,13 +210,13 @@ header {
 }
 
 /* Linhas de Separação  */
-.content-sobre .header .lines {
+.content .header .lines {
     width: 100%;
     height: 45px;
     position: relative;
 }
 
-.content-sobre .header .lines::after, .content-sobre .header .lines::before {
+.content .header .lines::after, .content .header .lines::before {
     content: '';
     position: absolute;
     margin: auto;
@@ -170,11 +226,11 @@ header {
     top: 45%;
 }
 
-.content-sobre .header .lines::after {
+.content .header .lines::after {
     left: 0;
 }
 
-.content-sobre .header .lines::before {
+.content .header .lines::before {
     right: 0;
 }
 
@@ -193,13 +249,48 @@ header {
 #habilidades {
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background: url('./assets/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;    
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    overflow-y: hidden;
+}
+.body.habilidades {
+    flex: 1;
+}
+
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.habilidade h2 {
+    font-size: 2.8rem;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fab702;
+    margin-bottom: 15px;
+    text-align: center;
+    
+}
+
+.habilidade p {
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color:#919191;
+    margin-bottom: 25px;    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.habilidade img {
+    margin-top: 20px;
+    width: 40%;    
 }
 
 
-
-/* fONTES 
-Raleway nav
-Dosis titulos
-open sans p
-*/
