@@ -20,8 +20,8 @@
                     <li class="item"><a href="#inicio">Início</a></li>
                     <li class="item"><a href="#sobre">Sobre Mim</a></li>
                     <li class="item"><a href="#habilidades">Habilidades</a></li>
-                    <li class="item"><a href="#">Projetos</a></li>
-                    <li class="item"><a href="#">Contato</a></li>
+                    <li class="item"><a href="#projetos">Projetos</a></li>
+                    <li class="item"><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -108,7 +108,7 @@
         </div>
     </section>
     <section id="projetos">
-        <div class="container galeria">
+        <div class="container">
             <div class="content">
                 <div class="header">
                     <h2>Projetos</h2>
@@ -116,8 +116,8 @@
                         <div class="circle"></div>
                     </div>
                 </div>
-                <div class="body column">      
-                    <div class="line1">
+                <div class="body">      
+                    <div class="galeria-container">
                         <div class="content-projeto">
                             <div class="content-image">
                                 <img src="./assets/projeto.png" alt="">                        
@@ -142,8 +142,14 @@
                                 <h3>Projeto em andamento</h3>
                             </div>
                         </div>
-                    </div>              
-                    <div class="line2">
+                        <div class="content-projeto">
+                            <div class="content-image">
+                                <img src="./assets/projeto.png" alt="">                        
+                            </div>
+                            <div class="image-black">
+                                <h3>Projeto em andamento</h3>
+                            </div>
+                        </div>
                         <div class="content-projeto">
                             <div class="content-image">
                                 <img src="./assets/projeto.png" alt="">                        
@@ -159,16 +165,52 @@
                             <div class="image-black">
                                 <h3>Projeto em andamento</h3>
                             </div>
-                        </div>                 
-                        <div class="content-projeto">
-                            <div class="content-image">
-                                <img src="./assets/projeto.png" alt="">                        
+                        </div>                       
+                    </div>                                  
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <div class="container contato">
+            <div class="content">
+                <div class="header">
+                    <h2>Contato</h2>
+                    <div class="lines">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="body">
+                   <div class="contato-container">
+                    <form action="">
+                        <div class="contato-dados">
+                            <input class="input" type="text" name="nome" id="nome" placeholder="Nome">
+                            <input class="input" type="email" name="email" id="email" placeholder="Email">
+                            <input class="input" type="number" name="phone" id="phone" placeholder="Telefone">
+                            <input class="btn" type="button" value="Enviar Mensagem">
+                        </div>
+                        <div class="contato-mensagem">
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="9" placeholder="Digite sua mensagem"></textarea>
+                        </div>
+                    </form>
+                        <div class="contato-info">
+                            <h3>Informações de Contato</h3>                           
+                            <div class="contato-items">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p>contato.lopesdev@gmail.com</p>                                
                             </div>
-                            <div class="image-black">
-                                <h3>Projeto em andamento</h3>
+                            <hr>
+                            <div class="contato-items">
+                                <i class="fa-sharp fa-solid fa-phone"></i>
+                                <p>(51) 9 8944-1117</p>                                
+                            </div>
+                            <hr>
+                            <div class="contato-items">
+                                <i class="fa-brands fa-github"></i>
+                                <a href="https://github.com/lopesdevfront" target="_blank">https://github.com/lopesdevfront</a>                               
                             </div>
                         </div>
-                    </div>              
+                   </div>
                 </div>
             </div>
         </div>

@@ -127,7 +127,7 @@ header {
 
 /* Sobre mim */
 
-#sobre, #projetos {
+#sobre, #projetos, #contato {
     width: 100vw;
     background-color: black;         
 }
@@ -135,8 +135,7 @@ header {
 .container {
     max-width: 1140px;
     width: 70%;
-    margin: 0 auto;       
-    
+    margin: 0 auto;   
 }
 
 .content{
@@ -297,14 +296,15 @@ header {
 /* Projetos */
 
 
-.line1, .line2 {
+.galeria-container {
     display: flex;
-    margin: 5px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .content-projeto {
     display: flex;
-    margin: 0px 5px;      
+    margin: 5px 5px;      
 }
 .content-image {    
     overflow-y: hidden;
@@ -338,8 +338,100 @@ header {
     color:#fab702;
 }
 
-.column {
+/* Contato */
+
+.contato {
+    width: 100%;
+}
+
+.contato-container {    
+    width: 1140px;
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+
+.contato-container form{
+    display: flex;    
+    flex-wrap: wrap;   
+    justify-content: flex-end;    
+    align-items: flex-start;
+}
+.contato-container .input{
+    width: 250px;
+    margin-bottom: 30px;    
+    padding: 15px 15px;    
+    color: #fab702;
+}
+.contato-container .input::placeholder{
+    color: #fab802a9;  
+}
+
+.btn {
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    border: 0.3px solid rgba(255, 255, 255, 0.445);
+    color: #fab702; 
+}
+
+
+.contato-container form textarea{
+    resize: none;
+    width: 500px;
+    margin: 0px 30px;
+    padding: 10px;
+    color: #fab702; 
+}
+
+.contato-container textarea::placeholder{
+    color: #fab802a9;  
+}
+
+input, textarea {
+    border: 1px solid #18191b;
+    background-color: transparent;
+    outline: none;
+}
+
+.contato-dados {
+    display: flex;
     flex-direction: column;
 }
 
-/* Testar commit */
+.contato-info {
+    width: 250px;
+}
+
+.contato-info h3 {
+    font-size: 15px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;    
+}
+
+.contato-info hr {
+    margin-bottom: 10px;
+    border-color: rgba(117,117,117,.29);
+}
+
+.contato-items {
+    display: flex;
+}
+
+.contato-items i {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #fab702;
+}
+
+.contato-items p, a {
+    color: #919191;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    text-decoration: none;
+}
